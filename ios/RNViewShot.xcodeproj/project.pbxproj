@@ -8,10 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B3E7B58A1CC2AC0600A0062D /* RNViewShot.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNViewShot.m */; };
+		B555D56323A7AF6E00D52349 /* RNViewShot.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNViewShot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B555D56523A7AF6E00D52349 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -26,10 +36,18 @@
 		134814201AA4EA6300B7C361 /* libRNViewShot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNViewShot.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNViewShot.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; path = RNViewShot.h; sourceTree = "<group>"; tabWidth = 2; };
 		B3E7B5891CC2AC0600A0062D /* RNViewShot.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = RNViewShot.m; sourceTree = "<group>"; tabWidth = 2; };
+		B555D56923A7AF6E00D52349 /* libRNViewShot-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRNViewShot-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		58B511D81A9E6C8500147676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B555D56423A7AF6E00D52349 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +71,7 @@
 				B3E7B5881CC2AC0600A0062D /* RNViewShot.h */,
 				B3E7B5891CC2AC0600A0062D /* RNViewShot.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				B555D56923A7AF6E00D52349 /* libRNViewShot-tvOS.a */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -78,6 +97,23 @@
 			productReference = 134814201AA4EA6300B7C361 /* libRNViewShot.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		B555D56123A7AF6E00D52349 /* RNViewShot-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B555D56623A7AF6E00D52349 /* Build configuration list for PBXNativeTarget "RNViewShot-tvOS" */;
+			buildPhases = (
+				B555D56223A7AF6E00D52349 /* Sources */,
+				B555D56423A7AF6E00D52349 /* Frameworks */,
+				B555D56523A7AF6E00D52349 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RNViewShot-tvOS";
+			productName = RCTDataManager;
+			productReference = B555D56923A7AF6E00D52349 /* libRNViewShot-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +133,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -105,6 +142,7 @@
 			projectRoot = "";
 			targets = (
 				58B511DA1A9E6C8500147676 /* RNViewShot */,
+				B555D56123A7AF6E00D52349 /* RNViewShot-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -115,6 +153,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E7B58A1CC2AC0600A0062D /* RNViewShot.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B555D56223A7AF6E00D52349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B555D56323A7AF6E00D52349 /* RNViewShot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +273,40 @@
 			};
 			name = Release;
 		};
+		B555D56723A7AF6E00D52349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+			};
+			name = Debug;
+		};
+		B555D56823A7AF6E00D52349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -244,6 +324,15 @@
 			buildConfigurations = (
 				58B511F01A9E6C8500147676 /* Debug */,
 				58B511F11A9E6C8500147676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B555D56623A7AF6E00D52349 /* Build configuration list for PBXNativeTarget "RNViewShot-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B555D56723A7AF6E00D52349 /* Debug */,
+				B555D56823A7AF6E00D52349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
